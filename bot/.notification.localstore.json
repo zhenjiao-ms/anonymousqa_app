@@ -1,0 +1,21 @@
+{
+  "_c9537f2e-3b11-4a32-bf73-98a9ccedaf66_a:1e6zMb8mhuuLzbHz6rWPrPFh8o5GVOzEGBNfjO_NuCyAqlXe1oTKnaDugtX6HGFOc2SYXvhOkKvyG99cb67HAj4EGBzjGqMWfa9tUVb2A4x7-vlkypO5d5skwfI7bUP0L": {
+    "activityId": "f:421d6c26-5c2f-42d4-b21d-c1d69c5a6455",
+    "user": {
+      "id": "29:1rTXV_0ChEIsdgGiTL3QBOQSckPvi3566vTeyEmzYi58AXyc0wszkS5MvBRyQbKMuxLqcrCmWWEaPRdSi3mG3bg",
+      "aadObjectId": "12083d3b-7eb1-47ab-8d92-e3f42980a450"
+    },
+    "bot": {
+      "id": "28:e60be47f-9a16-4df3-b6e9-ad6fca5b22ee",
+      "name": "anonymousqaapp-local-debug"
+    },
+    "conversation": {
+      "conversationType": "personal",
+      "tenantId": "c9537f2e-3b11-4a32-bf73-98a9ccedaf66",
+      "id": "a:1e6zMb8mhuuLzbHz6rWPrPFh8o5GVOzEGBNfjO_NuCyAqlXe1oTKnaDugtX6HGFOc2SYXvhOkKvyG99cb67HAj4EGBzjGqMWfa9tUVb2A4x7-vlkypO5d5skwfI7bUP0L"
+    },
+    "channelId": "msteams",
+    "locale": "en-US",
+    "serviceUrl": "https://smba.trafficmanager.net/apac/"
+  }
+}

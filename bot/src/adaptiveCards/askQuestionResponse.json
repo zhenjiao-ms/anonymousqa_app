@@ -1,0 +1,36 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${body}",
+      "wrap": true
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Type your question here"
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Who do you want to get answer from"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Execute",
+          "verb": "submit",
+          "title": "Submit"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}

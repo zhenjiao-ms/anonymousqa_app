@@ -15,6 +15,7 @@
     {
       "type": "Input.Text",
       "placeholder": "Type your question here",
+      "isMultiline": true,
       "id": "question"
     },
     {

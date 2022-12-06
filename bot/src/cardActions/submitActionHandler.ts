@@ -24,7 +24,7 @@ export class SubmitActionHandler implements TeamsFxAdaptiveCardActionHandler {
     const question = actionData['question']??'';
     const answeredBy = actionData['answeredBy']??'';
     const cardData: QuestionCardData = {
-      title: "A new question is submitted",
+      title: "A new anonymous question is just submitted for DevDiv China All hands. Please click 'I like it' button to increase the chance to get it answered. (all your responses will be anonymous)",
       body: question,
       questionId: 0,
       questionText: question

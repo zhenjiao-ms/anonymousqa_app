@@ -1,10 +1,9 @@
 import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 import { TurnContext, InvokeResponse } from "botbuilder";
 import { TeamsFxAdaptiveCardActionHandler, InvokeResponseFactory } from "@microsoft/teamsfx";
-import responseCard from "../adaptiveCards/question.json";
 import { CardData } from "../cardModels";
-import { conversationBot } from "../internal/initialize";
 import { likeQuestion } from "../question"
+import responseCard from "../adaptiveCards/questionliked.json";
 
 /**
  * The `DoStuffActionHandler` registers an action with the `TeamsFxBotActionHandler` and responds
@@ -21,9 +20,15 @@ export class LikeActionHandler implements TeamsFxAdaptiveCardActionHandler {
     /**
      * You can send an adaptive card to respond to the card action invoke.
      */
-    //await likeQuestion(id);
-    await likeQuestion(13);
-    return InvokeResponseFactory.textMessage("Thanks for sharing your feedback to the question");
+    await likeQuestion(actionData['id']);
+    const question = actionData['question']
+    const cardData: CardData = {
+      title: "We have heard your voice",
+      body: `Thanks for letting us know that you like the question "\r${question}"`
+    };
+
+    const cardJson = AdaptiveCards.declare(responseCard).render(cardData);  
+    return InvokeResponseFactory.adaptiveCard(cardJson);
 
     /**
      * If you want to send invoke response with text message, you can:

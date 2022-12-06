@@ -19,8 +19,8 @@ export class AskCommandHandler implements TeamsFxBotCommandHandler {
 
     // Render your adaptive card for reply message
     const cardData: CardData = {
-      title: "Your Hello World Bot is Running",
-      body: "Congratulations! Your hello world bot is running. Click the button below to trigger an action.",
+      title: "Welcome to anonymous Q&A bot",
+      body: "Please fill the form below and click the 'Submit' button",
     };
 
     const cardJson = AdaptiveCards.declare(helloWorldCard).render(cardData);

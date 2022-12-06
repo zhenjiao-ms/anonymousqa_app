@@ -1,0 +1,32 @@
+{
+    "solution": {
+        "provisionSucceeded": true,
+        "teamsAppTenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "subscriptionId": "e24d88be-b95f-4815-ba25-ae48defc8da2",
+        "subscriptionName": "Teams Cloud - Staging with TTL = 30 Days",
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "needCreateResourceGroup": true,
+        "resourceGroupName": "anonymousqaapp-dev-rg",
+        "location": "East Asia",
+        "resourceNameSuffix": "a3580b"
+    },
+    "fx-resource-appstudio": {
+        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+        "teamsAppId": "4b8e8894-b8d6-41d5-acf7-14c7945bf20c"
+    },
+    "fx-resource-bot": {
+        "botId": "aa50c911-f9a4-4309-84b6-59c95b054223",
+        "botPassword": "{{fx-resource-bot.botPassword}}",
+        "skuName": "B1",
+        "siteName": "anonymousq0b8c7fbot",
+        "domain": "anonymousq0b8c7fbot.azurewebsites.net",
+        "appServicePlanName": "anonymousq0b8c7fbot",
+        "resourceId": "/subscriptions/e24d88be-b95f-4815-ba25-ae48defc8da2/resourceGroups/anonymousqaapp-dev-rg/providers/Microsoft.Web/sites/anonymousq0b8c7fbot",
+        "siteEndpoint": "https://anonymousq0b8c7fbot.azurewebsites.net"
+    },
+    "fx-resource-identity": {
+        "identityName": "anonymousq0b8c7f",
+        "identityResourceId": "/subscriptions/e24d88be-b95f-4815-ba25-ae48defc8da2/resourceGroups/anonymousqaapp-dev-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/anonymousq0b8c7f",
+        "identityClientId": "266e923d-b8ab-42cf-9900-3cfbabfa8a6e"
+    }
+}

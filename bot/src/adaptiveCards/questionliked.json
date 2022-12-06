@@ -11,20 +11,6 @@
       "type": "TextBlock",
       "text": "${body}",
       "wrap": true
-    },
-    {
-      "type": "ActionSet",
-      "actions": [
-        {
-          "type": "Action.Execute",
-          "verb": "like",
-          "title": "I like it",
-          "data": {
-            "id": "${questionId}",
-            "question": "${questionText}"
-          }
-        }
-      ]
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

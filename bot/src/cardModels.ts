@@ -6,3 +6,10 @@ export interface CardData {
   title: string;
   body: string;
 }
+
+export interface QuestionCardData {
+  title: string;
+  body: string;
+  questionId: number;
+  questionText: string;
+}

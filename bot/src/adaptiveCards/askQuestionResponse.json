@@ -14,11 +14,13 @@
     },
     {
       "type": "Input.Text",
-      "placeholder": "Type your question here"
+      "placeholder": "Type your question here",
+      "id": "question"
     },
     {
       "type": "Input.Text",
-      "placeholder": "Who do you want to get answer from"
+      "placeholder": "Who do you want to get answer from",
+      "id": "answeredBy"
     },
     {
       "type": "ActionSet",

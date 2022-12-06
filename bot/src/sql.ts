@@ -4,6 +4,7 @@ import * as tedious from "tedious";
 
 export function getSQLConnection() {
     let config;
+    console.log(`Start to connect to database ${process.env.AZURE_SQL_SERVER}/${process.env.AZURE_SQL_DATABASE}, with username = ${process.env.AZURE_SQL_USERNAME}`);
     if(process.env.AZURE_SQL_USERNAME != undefined){
         config = {
             server: process.env.AZURE_SQL_SERVER,
@@ -11,11 +12,11 @@ export function getSQLConnection() {
               type: 'default',
               options: {
                 userName: process.env.AZURE_SQL_USERNAME,
-                password: process.env.AUZRE_SQL_PASSWORD
+                password: process.env.AZURE_SQL_PASSWORD
               }
             },
             options: {
-              database: process.env.AZURE_SQL_DATEBASE,
+              database: process.env.AZURE_SQL_DATABASE,
               port: parseInt(process.env.AZURE_SQL_PORT)
             }
           };
@@ -31,7 +32,7 @@ export function getSQLConnection() {
                 }
               },
               options: {
-                database: process.env.AZURE_SQL_DATEBASE,
+                database: process.env.AZURE_SQL_DATABASE,
                 port: parseInt(process.env.AZURE_SQL_PORT)
               }
                 };
@@ -47,11 +48,13 @@ export function getSQLConnection() {
         connection.on('debug', function (err) {
             console.log('debug:', err);
         });
+        console.log(`Connecting to database ${config.options.database}`);
         connection.connect();
     });
 }
 
 export async function executeQuery(query, connection): Promise<any[]> {
+    console.log(`Start to run query '${query}'`);
     return new Promise((resolve, reject) => {
         var res = [];
         const request = new tedious.Request(query, (err) => {

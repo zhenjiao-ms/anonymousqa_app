@@ -10,8 +10,23 @@
     },
     {
       "type": "TextBlock",
+      "text": "The question below is just submitted for DevDiv China All hands:",
+      "wrap": true,
+      "separator": true
+    },
+    {
+      "type": "TextBlock",
       "text": "${body}",
-      "wrap": true
+      "wrap": true,
+      "weight": "bolder",
+      "color": "accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "- All responses are anonymous\n- Click 'I like it' if you like this question.\n- Click 'Submit my question' to send your own question.",
+      "wrap": true,
+      "weight": "Bolder",
+      "isSubtle": true
     },
     {
       "type": "ActionSet",
@@ -24,6 +39,11 @@
             "id": "${questionId}",
             "question": "${questionText}"
           }
+        },
+        {
+          "type": "Action.OpenUrl",
+          "title": "Submit my question",
+          "url": "https://forms.office.com/r/jwqRBirmHd"
         }
       ]
     }

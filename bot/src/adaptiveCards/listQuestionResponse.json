@@ -1,18 +1,80 @@
 {
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
+  "version": "1.4",
   "body": [
     {
       "type": "TextBlock",
-      "size": "Medium",
+      "text": "${title}",
+      "size": "Large",
       "weight": "Bolder",
-      "text": "✅[ACK] ${title}"
+      "wrap": true
     },
     {
       "type": "TextBlock",
-      "text": "${body}",
+      "text": "${appName}",
+      "isSubtle": true,
+      "color": "Accent",
+      "weight": "Bolder",
+      "size": "Small",
+      "spacing": "None"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${description}",
+      "isSubtle": true,
       "wrap": true
+    },
+    {
+      "$data": "${data}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${question}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${liked}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${answerBy}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.4"
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "I have question",
+      "url": "https://forms.office.com/r/jwqRBirmHd"
+    }
+  ]
 }

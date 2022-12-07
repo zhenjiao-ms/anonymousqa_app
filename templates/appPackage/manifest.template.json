@@ -41,14 +41,6 @@
                         "groupchat"
                     ],
                     "commands": [
-                        {
-                            "title": "ask",
-                            "description": "Ask a new question"
-                        },
-                        {
-                            "title": "list",
-                            "description": "List all questions"
-                        }
                     ]
                 }
             ]

@@ -1,6 +1,6 @@
 import { AdaptiveCards } from "@microsoft/adaptivecards-tools";
 import { TurnContext, InvokeResponse } from "botbuilder";
-import { TeamsFxAdaptiveCardActionHandler, InvokeResponseFactory } from "@microsoft/teamsfx";
+import { TeamsFxAdaptiveCardActionHandler, InvokeResponseFactory, sendAdaptiveCard } from "@microsoft/teamsfx";
 import responseCard from "../adaptiveCards/question.json";
 import { QuestionCardData } from "../cardModels";
 import { conversationBot } from "../internal/initialize";
@@ -34,16 +34,26 @@ export class SubmitActionHandler implements TeamsFxAdaptiveCardActionHandler {
     cardData.questionId = id;
     const cardJson = AdaptiveCards.declare(responseCard).render(cardData);  
     const installs = await conversationBot.notification.installations();
+    const sent = new Set();
     for (const target of installs) {
       if (target.type === "Channel" || target.type === "Group") {
           const members = await target.members();
           for (const member of members){
-            console.log(`Send card to ${member.account.userPrincipalName}`);
-            await member.sendAdaptiveCard(cardJson);
+            const email = member.account.userPrincipalName;
+            const id = member.account.id;
+            if (!sent.has(id)) {
+              console.log(`Send card to ${email}`);
+              sent.add(id);
+              await member.sendAdaptiveCard(cardJson);
+            }
           }
       }else{
-        console.log(`Send card to ${target.conversationReference.conversation.id}`);
-        await target.sendAdaptiveCard(cardJson);
+        const id = target.conversationReference.user.id;
+        if(!sent.has(id)){
+          console.log(`Send card to ${id}`);
+          sent.add(id);
+          await target.sendAdaptiveCard(cardJson);
+        }
       }
     }
       return InvokeResponseFactory.textMessage("Thanks very much for sending the question!");

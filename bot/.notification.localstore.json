@@ -17,5 +17,25 @@
     "channelId": "msteams",
     "locale": "en-US",
     "serviceUrl": "https://smba.trafficmanager.net/apac/"
+  },
+  "_c9537f2e-3b11-4a32-bf73-98a9ccedaf66_19:010a32e9e4c54db48bd68db0de939268@thread.tacv2": {
+    "activityId": "f:a4e9b593-3d56-a918-c655-290ed4de8b95",
+    "user": {
+      "id": "29:1rTXV_0ChEIsdgGiTL3QBOQSckPvi3566vTeyEmzYi58AXyc0wszkS5MvBRyQbKMuxLqcrCmWWEaPRdSi3mG3bg",
+      "aadObjectId": "12083d3b-7eb1-47ab-8d92-e3f42980a450"
+    },
+    "bot": {
+      "id": "28:e60be47f-9a16-4df3-b6e9-ad6fca5b22ee",
+      "name": "anonymousqaapp-local-debug"
+    },
+    "conversation": {
+      "isGroup": true,
+      "conversationType": "channel",
+      "tenantId": "c9537f2e-3b11-4a32-bf73-98a9ccedaf66",
+      "id": "19:010a32e9e4c54db48bd68db0de939268@thread.tacv2"
+    },
+    "channelId": "msteams",
+    "locale": "en-US",
+    "serviceUrl": "https://smba.trafficmanager.net/apac/"
   }
 }

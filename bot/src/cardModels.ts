@@ -13,3 +13,9 @@ export interface QuestionCardData {
   questionId: number;
   questionText: string;
 }
+
+export interface QuestionListCardData {
+  title: string;
+  body: string;
+  data: any[];
+}

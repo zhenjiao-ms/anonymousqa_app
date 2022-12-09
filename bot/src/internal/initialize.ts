@@ -1,9 +1,9 @@
-import { DoStuffActionHandler } from "../cardActions/doStuffActionHandler";
 import {SubmitActionHandler } from "../cardActions/submitActionHandler";
 import { AskCommandHandler } from "../commands/askCommandHandler";
 import { ConversationBot } from "@microsoft/teamsfx";
 import config from "./config";
 import { LikeActionHandler } from "../cardActions/likeActionHandler";
+import { ListCommandHandler } from "../commands/listCommandHandler";
 
 // Create the conversation bot and register the command and card action handlers for your app.
 export const conversationBot = new ConversationBot({
@@ -15,12 +15,12 @@ export const conversationBot = new ConversationBot({
   },
   command: {
     enabled: true,
-    commands: [new AskCommandHandler()],
+    commands: [new AskCommandHandler(),
+               new ListCommandHandler()],
   },
   cardAction: {
     enabled: true,
     actions: [new LikeActionHandler(),
-              new DoStuffActionHandler(),
               new SubmitActionHandler()
               ],
   },

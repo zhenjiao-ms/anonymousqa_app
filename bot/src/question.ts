@@ -14,7 +14,7 @@ export async function likeQuestion(id) {
     await executeQuery(`update q set liked += 1 where id=${id}`, conn);
 }
 
-export async function listQuestions(id) {
+export async function listQuestions() {
     const conn = await getSQLConnection();
     const res = await executeQuery(`select * from q`, conn);
     return res;

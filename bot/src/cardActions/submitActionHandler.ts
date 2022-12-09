@@ -42,18 +42,28 @@ export class SubmitActionHandler implements TeamsFxAdaptiveCardActionHandler {
             const email = member.account.userPrincipalName;
             const id = member.account.id;
             if (!sent.has(id)) {
-              console.log(`Send card to ${email}`);
-              sent.add(id);
-              await member.sendAdaptiveCard(cardJson);
+              try{
+                console.log(`Send card to ${email}`);
+                sent.add(id);
+                await member.sendAdaptiveCard(cardJson);
+              }
+              catch (e) {
+                console.log(`Got exception in sending card to ${email}, error=${e}`);
+              }
             }
           }
       }else{
         const id = target.conversationReference.user.id;
         if(!sent.has(id)){
-          console.log(`Send card to ${id}`);
-          sent.add(id);
-          await target.sendAdaptiveCard(cardJson);
-        }
+          try{
+            console.log(`Send card to ${id}`);
+            sent.add(id);
+            await target.sendAdaptiveCard(cardJson);
+          }
+          catch (e) {
+            console.log(`Got exception in sending card to ${id}, error=${e}`);
+          }
+    }
       }
     }
       return InvokeResponseFactory.textMessage("Thanks very much for sending the question!");

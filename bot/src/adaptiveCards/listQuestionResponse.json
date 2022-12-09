@@ -12,16 +12,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "${appName}",
-      "isSubtle": true,
-      "color": "Accent",
-      "weight": "Bolder",
-      "size": "Small",
-      "spacing": "None"
-    },
-    {
-      "type": "TextBlock",
-      "text": "${description}",
+      "text": "${body}",
       "isSubtle": true,
       "wrap": true
     },
@@ -52,7 +43,7 @@
                   "wrap": true
                 }
               ],
-              "width": "stretch"
+              "width": "40px"
             },
             {
               "type": "Column",
@@ -63,7 +54,7 @@
                   "wrap": true
                 }
               ],
-              "width": "stretch"
+              "width": "100px"
             }
           ]
         }

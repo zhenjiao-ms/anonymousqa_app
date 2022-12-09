@@ -12,6 +12,16 @@
       "type": "TextBlock",
       "text": "${body}",
       "wrap": true
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "Submit my question",
+          "url": "https://forms.office.com/r/jwqRBirmHd"
+        }
+      ]
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

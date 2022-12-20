@@ -1,4 +1,5 @@
 # TeamsFx files
+teamsfx/.env.*
 node_modules
 .fx/configs/localSettings.json
 .fx/states/*.userdata

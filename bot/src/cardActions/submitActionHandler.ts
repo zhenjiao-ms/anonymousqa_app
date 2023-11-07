@@ -27,12 +27,31 @@ export class SubmitActionHandler implements TeamsFxAdaptiveCardActionHandler {
       title: "Notification from Anonymous Q&A Bot",
       body: question,
       questionId: 0,
-      questionText: question
+      questionText: question,
+      eventName: process.env.EVENTNAME,
+      questionUrl: process.env.QUESTIONURL,
     };
 
     const id = await addNewQuestion(question, '', answeredBy);
     cardData.questionId = id;
     const cardJson = AdaptiveCards.declare(responseCard).render(cardData);  
+    this.sendCards(cardJson);
+    return InvokeResponseFactory.textMessage("Thanks very much for sending the question!");
+
+    /**
+     * If you want to send invoke response with text message, you can:
+     * 
+     return InvokeResponseFactory.textMessage("[ACK] Successfully!");
+    */
+
+    /**
+     * If you want to send invoke response with error message, you can:
+     *
+     * return InvokeResponseFactory.errorResponse(InvokeResponseErrorCode.BadRequest, "The incoming request is invalid.");
+     */
+  }
+
+  async sendCards(cardJson: any){
     const installs = await conversationBot.notification.installations();
     const sent = new Set();
     for (const target of installs) {
@@ -66,18 +85,6 @@ export class SubmitActionHandler implements TeamsFxAdaptiveCardActionHandler {
     }
       }
     }
-      return InvokeResponseFactory.textMessage("Thanks very much for sending the question!");
 
-    /**
-     * If you want to send invoke response with text message, you can:
-     * 
-     return InvokeResponseFactory.textMessage("[ACK] Successfully!");
-    */
-
-    /**
-     * If you want to send invoke response with error message, you can:
-     *
-     * return InvokeResponseFactory.errorResponse(InvokeResponseErrorCode.BadRequest, "The incoming request is invalid.");
-     */
   }
 }

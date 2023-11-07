@@ -26,7 +26,8 @@ export class ListCommandHandler implements TeamsFxBotCommandHandler {
         question: "**Question**",
         liked: "**Liked**",
         answerBy: "**Sent To**"
-      }]
+      }],
+      questionUrl: process.env.QUESTIONURL
     };
 
     const questions = await listQuestions();

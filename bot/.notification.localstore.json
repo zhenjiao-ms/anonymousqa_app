@@ -18,24 +18,23 @@
     "locale": "en-US",
     "serviceUrl": "https://smba.trafficmanager.net/apac/"
   },
-  "_c9537f2e-3b11-4a32-bf73-98a9ccedaf66_19:010a32e9e4c54db48bd68db0de939268@thread.tacv2": {
-    "activityId": "f:a4e9b593-3d56-a918-c655-290ed4de8b95",
+  "_72f988bf-86f1-41af-91ab-2d7cd011db47_a:11anfxFfVHLwXbO9-qW2PHo9hbklPudYsM6pw6LIy6FecGYZFWWm8chGRUa616STRdD-liBF-ACK6JlEzieNz9C72dAmIOtGpDJBb1bjsA4MvjcvNWx3Y8JguSlDgd-lR": {
+    "activityId": "f:d6871a30-6197-f3e7-a309-fa72fcd3c090",
     "user": {
-      "id": "29:1rTXV_0ChEIsdgGiTL3QBOQSckPvi3566vTeyEmzYi58AXyc0wszkS5MvBRyQbKMuxLqcrCmWWEaPRdSi3mG3bg",
-      "aadObjectId": "12083d3b-7eb1-47ab-8d92-e3f42980a450"
+      "id": "29:17O2CAEfzK6vv5fYwbtDd4L5cWWNqHdpZOSKod9mToZtD6_v2mEuer9C7WiWei81hxa45_hct64eObZs53Vck7w",
+      "aadObjectId": "4d803598-d243-463f-9386-72b82f9aed27"
     },
     "bot": {
-      "id": "28:e60be47f-9a16-4df3-b6e9-ad6fca5b22ee",
-      "name": "anonymousqaapp-local-debug"
+      "id": "28:2911d912-2ec7-4b35-ae69-dc71564bbd14",
+      "name": "anonymousqa_app-bot"
     },
     "conversation": {
-      "isGroup": true,
-      "conversationType": "channel",
-      "tenantId": "c9537f2e-3b11-4a32-bf73-98a9ccedaf66",
-      "id": "19:010a32e9e4c54db48bd68db0de939268@thread.tacv2"
+      "conversationType": "personal",
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "id": "a:11anfxFfVHLwXbO9-qW2PHo9hbklPudYsM6pw6LIy6FecGYZFWWm8chGRUa616STRdD-liBF-ACK6JlEzieNz9C72dAmIOtGpDJBb1bjsA4MvjcvNWx3Y8JguSlDgd-lR"
     },
     "channelId": "msteams",
     "locale": "en-US",
-    "serviceUrl": "https://smba.trafficmanager.net/apac/"
+    "serviceUrl": "https://smba.trafficmanager.net/amer/"
   }
 }

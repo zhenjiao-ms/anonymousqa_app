@@ -10,7 +10,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "The question below is just submitted for DevDiv China All hands:",
+      "text": "The question below is just submitted for ${eventName}:",
       "wrap": true,
       "separator": true
     },
@@ -43,7 +43,7 @@
         {
           "type": "Action.OpenUrl",
           "title": "Submit my question",
-          "url": "https://forms.office.com/r/jwqRBirmHd"
+          "url": "${questionUrl}"
         }
       ]
     }

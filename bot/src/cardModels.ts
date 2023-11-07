@@ -5,6 +5,7 @@
 export interface CardData {
   title: string;
   body: string;
+  questionUrl: string;
 }
 
 export interface QuestionCardData {
@@ -12,10 +13,13 @@ export interface QuestionCardData {
   body: string;
   questionId: number;
   questionText: string;
+  eventName: string;
+  questionUrl: string;
 }
 
 export interface QuestionListCardData {
   title: string;
   body: string;
   data: any[];
+  questionUrl: string;
 }

@@ -65,7 +65,7 @@
     {
       "type": "Action.OpenUrl",
       "title": "I have question",
-      "url": "https://forms.office.com/r/jwqRBirmHd"
+      "url": "${questionUrl}"
     }
   ]
 }

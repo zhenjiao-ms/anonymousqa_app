@@ -19,7 +19,7 @@
         {
           "type": "Action.OpenUrl",
           "title": "Submit my question",
-          "url": "{questionUrl}"
+          "url": "${questionUrl}"
         }
       ]
     }

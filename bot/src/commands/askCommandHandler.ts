@@ -21,6 +21,7 @@ export class AskCommandHandler implements TeamsFxBotCommandHandler {
     const cardData: CardData = {
       title: "Welcome to anonymous Q&A bot",
       body: "Please fill the form below and click the 'Submit' button",
+      questionUrl: process.env.QUESTIONURL,
     };
 
     const cardJson = AdaptiveCards.declare(helloWorldCard).render(cardData);

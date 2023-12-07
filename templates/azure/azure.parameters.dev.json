@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "provisionParameters": {
+      "value": {
+        "botAadAppClientId": "${{BOT_ID}}",
+        "botAadAppClientSecret": "${{SECRET_BOT_PASSWORD}}",
+        "resourceBaseName": "anonymousq0b8c7f"
+      }
+    }
+  }
+}

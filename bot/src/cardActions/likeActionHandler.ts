@@ -24,7 +24,8 @@ export class LikeActionHandler implements TeamsFxAdaptiveCardActionHandler {
     const question = actionData['question']
     const cardData: CardData = {
       title: "We have heard your voice",
-      body: `Thanks for letting us know that you like the question "\r${question}"`
+      body: `Thanks for letting us know that you like the question "\r${question}"`,
+      questionUrl: process.env.QUESTIONURL,
     };
 
     const cardJson = AdaptiveCards.declare(responseCard).render(cardData);  

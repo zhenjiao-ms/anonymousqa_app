@@ -2,7 +2,7 @@ import * as tedious from "tedious";
 
 //require('dotenv').config();
 
-export function getSQLConnection() {
+export function getSQLConnection(): Promise<tedious.Connection> {
     let config;
     console.log(`Start to connect to database ${process.env.AZURE_SQL_SERVER}/${process.env.AZURE_SQL_DATABASE}, with username = ${process.env.AZURE_SQL_USERNAME}`);
     if(process.env.AZURE_SQL_USERNAME != undefined){
@@ -80,3 +80,4 @@ export async function executeQuery(query, connection): Promise<any[]> {
         connection.execSql(request);
     });
 }
+

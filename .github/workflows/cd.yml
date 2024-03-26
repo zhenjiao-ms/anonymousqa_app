@@ -1,0 +1,50 @@
+on:
+  push:
+    branches:
+      - cd
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TEAMSAPP_CLI_VERSION: "3.0.0"
+      # Add extra environment variables here so that teamsapp cli can use them.
+      BOT_ID: ${{vars.BOT_ID}}
+      PROVISIONOUTPUT__AZUREWEBAPPBOTOUTPUT__DOMAIN: ${{vars.PROVISIONOUTPUT__AZUREWEBAPPBOTOUTPUT__DOMAIN}}
+      PROVISIONOUTPUT__AZUREWEBAPPBOTOUTPUT__RESOURCEID: ${{vars.PROVISIONOUTPUT__AZUREWEBAPPBOTOUTPUT__RESOURCEID}}
+      TEAMS_APP_ID: ${{vars.TEAMS_APP_ID}}
+
+    steps:
+      - name: "Checkout Github Action"
+        uses: actions/checkout@cd
+
+      - name: Setup Node 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "20.x"
+
+      - name: install cli
+        run: |
+          npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+
+      - name: Login Azure by service principal
+        run: |
+          npx teamsapp account login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+          --service-principal true \
+          --tenant ${{vars.AZURE_TENANT_ID}} \
+          --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
+          --interactive false
+
+      - name: Deploy to hosting environment
+        run: |
+          npx teamsapp deploy --ignore-env-file true \
+          --interactive false
+
+      - name: Package app
+        run: |
+          npx teamsapp package
+
+      - name: upload appPackage
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: appPackage/build/appPackage.zip

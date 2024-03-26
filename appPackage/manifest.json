@@ -11,16 +11,16 @@
         "termsOfUseUrl": "https://www.example.com/privacy"
     },
     "icons": {
-        "color": "${{CONFIG__MANIFEST__ICONS__COLOR}}",
-        "outline": "${{CONFIG__MANIFEST__ICONS__OUTLINE}}"
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
     },
     "name": {
-        "short": "${{CONFIG__MANIFEST__APPNAME__SHORT}}",
-        "full": "${{CONFIG__MANIFEST__APPNAME__FULL}}"
+        "short": "anonymousqa_app",
+        "full": "Full name for anonymousqa_app"
     },
     "description": {
-        "short": "${{CONFIG__MANIFEST__DESCRIPTION__SHORT}}",
-        "full": "${{CONFIG__MANIFEST__DESCRIPTION__FULL}}"
+        "short": "Short description of anonymousqa_app",
+        "full": "Full description of anonymousqa_app"
     },
     "accentColor": "#FFFFFF",
     "bots": [

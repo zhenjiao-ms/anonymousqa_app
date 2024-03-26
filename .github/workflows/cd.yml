@@ -5,6 +5,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: dogfood
     env:
       TEAMSAPP_CLI_VERSION: "3.0.0"
       # Add extra environment variables here so that teamsapp cli can use them.

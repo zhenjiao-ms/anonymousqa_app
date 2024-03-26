@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - cd
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: "Checkout Github Action"
-        uses: actions/checkout@cd
+        uses: actions/checkout@main
 
       - name: Setup Node 20.x
         uses: actions/setup-node@v1

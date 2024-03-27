@@ -41,6 +41,7 @@ export function getSQLConnection(): Promise<tedious.Connection> {
     return new Promise((resolve, reject) => {
         connection.on('connect', err => {
             if (err) {
+                err.errors.map(error=>console.log('Error: ', error))
                 reject(err);
             }
             resolve(connection);

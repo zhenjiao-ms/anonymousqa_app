@@ -26,9 +26,9 @@ export function getSQLConnection(): Promise<tedious.Connection> {
             authentication: {
                 type:'azure-active-directory-msi-app-service',
                 options: {
-                    clientId: '',
-                  msiEndpoint: '',
-                  msiSecret: ''
+                    clientId: 'f1d92991-0647-41f0-851f-3e5c83ba310c',
+                    msiEndpoint: process.env.IDENTITY_ENDPOINT,
+                    msiSecret: ''
                 }
               },
               options: {
@@ -41,7 +41,11 @@ export function getSQLConnection(): Promise<tedious.Connection> {
     return new Promise((resolve, reject) => {
         connection.on('connect', err => {
             if (err) {
-                err.errors.map(error=>console.log('Error: ', error))
+                if (err.errors == undefined || err.errors.length == 0){
+                    console.log('Error: ', err);
+                }else{
+                    err.errors.map(error=>console.log('\nError: ', error))
+                }
                 reject(err);
             }
             resolve(connection);

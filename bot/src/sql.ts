@@ -26,8 +26,8 @@ export function getSQLConnection(): Promise<tedious.Connection> {
             authentication: {
                 type:'azure-active-directory-msi-app-service',
                 options: {
-                    clientId: 'f1d92991-0647-41f0-851f-3e5c83ba310c',
-                    msiEndpoint: process.env.IDENTITY_ENDPOINT,
+                    clientId: process.env.IDENTITY_ID,
+                    msiEndpoint: '',
                     msiSecret: ''
                 }
               },

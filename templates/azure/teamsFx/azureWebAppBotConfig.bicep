@@ -22,5 +22,7 @@ resource webAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
     AZURE_SQL_SERVER: sqlServer
     AZURE_SQL_PORT: sqlport
     AZURE_SQL_DATABASE: sqldb
+    QUESTIONURL: ''
+    EVENTNAME: 'DevDiv China All Hands'
   }, currentAppSettings)
 }

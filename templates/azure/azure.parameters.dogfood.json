@@ -7,9 +7,9 @@
         "botAadAppClientId": "${{BOT_ID}}",
         "botAadAppClientSecret": "${{SECRET_BOT_PASSWORD}}",
         "resourceBaseName": "anonymousq9cb247",
-        "sqlServer": "anonymousqa-dev-serve.database.windows.net",
+        "sqlServer": "${{SECRET_AZURE_SQL_SERVER}}",
         "sqlport": "1433",
-        "sqldb": "anonymousqa-dev"
+        "sqldb": "${{SECRET_AZURE_SQL_DB}}"
       }
     }
   }

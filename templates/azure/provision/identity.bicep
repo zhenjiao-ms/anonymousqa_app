@@ -13,3 +13,4 @@ output identityName string = identityName
 output identityClientId string = managedIdentity.properties.clientId
 output identityResourceId string = managedIdentity.id
 output identityPrincipalId string = managedIdentity.properties.principalId
+output identityTenantId string = managedIdentity.properties.tenantId
